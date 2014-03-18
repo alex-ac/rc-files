@@ -35,7 +35,7 @@ set hlsearch
 " Enable x, y position displaying in the status line.
 set ruler
 
-if has("win32")
+if or(has("win32"), has("win32unix"))
   " For windows set error parsing to the msvc mode.
   set errorformat=\ %#%f(%l)\ :\ %m
 endif
@@ -59,13 +59,30 @@ highlight StatusLineNC ctermfg=0 ctermbg=yellow
 set fillchars+=vert:│,stl:\─,stlnc:\─
 
 " Remap hjkl to the dworak htns
-noremap s l
-noremap n k
-noremap t j
+noremap h <left>
+noremap H <home>
+noremap <C-h> <C-home>
+noremap t <down>
+noremap T <C-left>
+noremap n <up>
+noremap N <C-right>
+noremap s <right>
+noremap S <end>
+noremap <C-s> <C-end>
 
 " Save and call make by C-b
-noremap <C-b> :wall<CR>:make<CR>
+set autoread
+set autowrite
+noremap <C-b> :make<CR>
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested cwindow
+
 " Go to next/previous error by C-n/C-p
-noremap <C-n> :cn<CR>
-noremap <C-p> :cp<CR>
+noremap <C-n> :cn<CR
+
+" Diff colors
+highlight DiffChange ctermbg=blue
+highlight DiffAdd ctermbg=green
+highlight DiffDelete ctermbg=red
+set fillchars+=diff:\ 
 
