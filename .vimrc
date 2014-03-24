@@ -81,8 +81,9 @@ autocmd QuickFixCmdPost    l* nested cwindow
 noremap <C-n> :cn<CR
 
 " Diff colors
-highlight DiffChange ctermbg=blue
-highlight DiffAdd ctermbg=green
-highlight DiffDelete ctermbg=red
+highlight DiffChange ctermbg=20
+highlight DiffAdd ctermbg=22
+highlight DiffDelete ctermbg=1
+highlight DiffText ctermbg=8
 set fillchars+=diff:\ 
 
