@@ -120,3 +120,9 @@ let g:ConqueTerm_CloseOnEnd = 1
 noremap tv :ConqueTermVSplit bash<cr>
 noremap ts :ConqueTermSplit bash<cr>
 
+" Buffer keybindings
+noremap <c-p> :enew<cr>
+noremap bn :bnext<cr>
+noremap bp :bprevious<cr>
+noremap bq :bp<cr>
+
