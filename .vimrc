@@ -87,3 +87,36 @@ highlight DiffDelete ctermbg=1
 highlight DiffText ctermbg=8
 set fillchars+=diff:\ 
 
+" Python support
+function! PyExec(...)
+  let pycommand = 'python'
+  if !has(pycommand)
+    let pycommand .= '3'
+    if !has(pycommand)
+      echom 'There is no python or python3 support found!'
+      return
+    endif
+  endif
+  let pycommand .= ' ' . join(a:000, ' ')
+  execute pycommand
+endfunction
+
+" Enable powerline plugin
+call PyExec('from powerline.vim import setup as powerline_setup')
+call PyExec('powerline_setup()')
+call PyExec('del powerline_setup')
+
+" Enable pathogen loader
+execute pathogen#infect()
+
+" Always show statusline
+set laststatus=2
+
+" Toggle Sidebar on sb
+noremap sb :NERDTreeToggle<cr>
+
+" ConqueTerm settings
+let g:ConqueTerm_CloseOnEnd = 1
+noremap tv :ConqueTermVSplit bash<cr>
+noremap ts :ConqueTermSplit bash<cr>
+
