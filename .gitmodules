@@ -4,6 +4,6 @@
 [submodule ".git-helpers"]
 	path = .git-helpers
 	url = https://github.com/alex-ac/git-helpers.git
-[submodule "/Users/alex-ac/.vim/bundle/vim-localrc"]
-	path = /Users/alex-ac/.vim/bundle/vim-localrc
-	url = https://github.com/thinca/vim-localrc.git
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git

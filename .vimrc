@@ -101,14 +101,9 @@ function! PyExec(...)
   execute pycommand
 endfunction
 
-" Enable powerline plugin
-call PyExec('from powerline.vim import setup as powerline_setup')
-call PyExec('powerline_setup()')
-call PyExec('del powerline_setup')
-
-" Enable pathogen loader
 execute pathogen#infect()
 
+" Enable pathogen loader
 " Always show statusline
 set laststatus=2
 
