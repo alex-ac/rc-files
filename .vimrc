@@ -35,7 +35,16 @@ set hlsearch
 " Enable x, y position displaying in the status line.
 set ruler
 
-if or(has("win32"), has("win32unix"))
+function! Or(...)
+  for a in a:000
+    if a
+      return a
+    endif
+  endfor
+  return 0
+endfunction
+
+if Or(has("win32"), has("win32unix"))
   " For windows set error parsing to the msvc mode.
   set errorformat=\ %#%f(%l)\ :\ %m
 endif
