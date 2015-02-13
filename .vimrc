@@ -87,7 +87,7 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested cwindow
 
 " Go to next/previous error by C-n/C-p
-noremap <C-n> :cn<CR
+noremap <C-n> :cn<CR>
 
 " Diff colors
 highlight DiffChange ctermbg=20
@@ -117,16 +117,20 @@ execute pathogen#infect()
 set laststatus=2
 
 " Toggle Sidebar on sb
-noremap sb :NERDTreeToggle<cr>
+noremap .sb :NERDTreeToggle<cr>
 
 " ConqueTerm settings
 let g:ConqueTerm_CloseOnEnd = 1
-noremap tv :ConqueTermVSplit bash<cr>
-noremap ts :ConqueTermSplit bash<cr>
+noremap .tv :ConqueTermVSplit bash<cr>
+noremap .ts :ConqueTermSplit bash<cr>
 
 " Buffer keybindings
 noremap <c-p> :enew<cr>
-noremap bn :bnext<cr>
-noremap bp :bprevious<cr>
-noremap bq :bp<cr>
+noremap .bn :bnext<cr>
+noremap .bp :bprevious<cr>
+noremap .bq :bp<cr>
+
+" Bash-like autocompletion.
+set wildmenu
+set wildmode=longest,list
 
