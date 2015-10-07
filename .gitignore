@@ -2,5 +2,8 @@
 !.gitignore
 !.vimrc
 !.vim/
+!.nvimrc
+!.nvim/
+.nvim/bundle
 !.screenrc
 
