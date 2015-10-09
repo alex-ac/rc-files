@@ -64,6 +64,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 
 Plugin 'scrooloose/nerdtree.git'
+
+Plugin 'kchmck/vim-coffee-script'
+
 call vundle#end()
 
 " Airline setup
@@ -93,3 +96,5 @@ let g:ctrlp_clear_cache_on_exit=0
 " NerdTREE
 noremap .sb :NERDTreeToggle<CR>
 
+" Coffeescript
+au BufRead,BufNewFile *.coffee set filetype=coffee
