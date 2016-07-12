@@ -1,24 +1,6 @@
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".git-helpers"]
 	path = .git-helpers
 	url = https://github.com/alex-ac/git-helpers.git
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule ".vim/bundle/vim-go"]
-	path = .vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule ".vim/bundle/vim-lldb"]
-	path = .vim/bundle/vim-lldb
-	url = https://github.com/gilligan/vim-lldb.git
 [submodule ".nvim/bundle/Vundle.vim"]
 	path = .nvim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
