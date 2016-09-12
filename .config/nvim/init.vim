@@ -98,3 +98,6 @@ noremap .sb :NERDTreeToggle<CR>
 
 " Coffeescript
 au BufRead,BufNewFile *.coffee set filetype=coffee
+
+" Python settings
+autocmd FileType python setlocal sts=4 ts=4 sw=4
