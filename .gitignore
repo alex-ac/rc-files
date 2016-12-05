@@ -2,7 +2,7 @@
 !.gitignore
 !.vimrc
 !.vim/
-!.nvimrc
+!.config/nvim/init.vim
 !.nvim/
 .nvim/bundle
 !.screenrc
