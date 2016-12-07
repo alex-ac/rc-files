@@ -20,6 +20,16 @@ set autoindent smartindent
 let leader = '-'
 let localleader = '+'
 " }}}
+" Disable arrows {{{
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+" }}}
 " Remap htns = hjkl {{{
 noremap h h
 noremap t j
