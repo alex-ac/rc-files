@@ -11,10 +11,6 @@ set mouse=
 " Enable syntax highlighting {{{
 syntax on
 " }}}
-" Setup folding {{{
-set foldenable
-set foldmethod=indent
-" }}}
 " Setup Tab width {{{
 set ts=2 sts=2 sw=2 et
 set autoindent smartindent
