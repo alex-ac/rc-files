@@ -10,16 +10,22 @@ set mouse=
 " }}}
 " Enable syntax highlighting {{{
 syntax on
+" highlight column 80 as a guide
+set colorcolumn=80
+highlight ColorColumn ctermbg=236
+" highlight long lines as error
+highlight LongLine ctermbg=1 ctermfg=15
+highlight TrailingWhitespace ctermbg=1 ctermfg=15
+highlight Tabs ctermbg=1 ctermfg=15
+match LongLine '\%>80v.\+'
+2match TrailingWhitespace ' \+\n'
+3match Tabs '\t'
 " }}}
 " Setup Tab width {{{
 set ts=2 sts=2 sw=2 et
 set autoindent smartindent
 " }}}
 " Setup Bindings {{{
-" Setup leader {{{
-let leader = '-'
-let localleader = '+'
-" }}}
 " Disable arrows {{{
 noremap <up> <nop>
 noremap <down> <nop>
@@ -46,9 +52,9 @@ set autowrite
 autocmd QuickFixCmdPost [^l]* nested cwindow
 noremap <C-b> :make<CR>
 " }}}
-" Go to next/prefious error by <leader>n/<leader>p {{{
-noremap <leader>n :cn<CR>
-noremap <leader>p :cp<CR>
+" Go to next/prefious error by <Leader>n/<leader>p {{{
+noremap <Leader>n :cn<CR>
+noremap <Leader>p :cp<CR>
 " }}}
 " }}}
 " Diff colors {{{
@@ -88,13 +94,14 @@ call vundle#end()
 let g:airline_powerline_fonts=1
 " }}}
 " Setup NerdTREE {{{
-noremap <leader>sb :NERDTreeToggle<CR>
+noremap <Leader>sb :NERDTreeToggle<CR>
 " }}}
 " Setup Tagbar {{{
-noremap <leader>st :TagbarToggle<CR>
+noremap <Leader>st :TagbarToggle<CR>
 " }}}
 " Setup Easytags {{{
 let g:easytags_async = 1
+let g:easytags_auto_highlight = 0
 " }}}
 " }}}
 " Python settings {{{
@@ -106,4 +113,6 @@ augroup END
 " Enable projects vimrc {{{
 set exrc
 " }}}
-" vim: set foldmethod=marker :
+" Terminal setup {{{
+tnoremap <ESC> <c-\><c-n>
+noremap <Leader>tt :botright10split term:///usr/local/bin/bash\ -i\ -l<cr>:set wfh<cr>i
