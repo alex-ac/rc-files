@@ -6,4 +6,5 @@
 !.nvim/
 .nvim/bundle
 !.screenrc
+!.profile
 
