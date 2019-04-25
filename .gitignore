@@ -7,4 +7,5 @@
 .nvim/bundle
 !.screenrc
 !.profile
+!.default.itermcolors
 
