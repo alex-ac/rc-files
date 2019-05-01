@@ -9,7 +9,6 @@ endif
 set mouse=
 " }}}
 " Enable syntax highlighting {{{
-syntax on
 " highlight column 80 as a guide
 set colorcolumn=80
 highlight ColorColumn ctermbg=236
@@ -76,6 +75,7 @@ set wildmenu
 set wildmode=longest,list
 " }}}
 " Plugins {{{
+filetype off
 " Setup Vundle {{{
 set rtp +=~/.nvim/bundle/Vundle.vim
 " }}}
@@ -88,7 +88,11 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'alex-ac/vim-plist'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
+syntax on
+filetype plugin indent on
 " }}}
 " Setup Airline {{{
 let g:airline_powerline_fonts=1
@@ -116,3 +120,5 @@ set exrc
 " Terminal setup {{{
 tnoremap <ESC> <c-\><c-n>
 noremap <Leader>tt :botright10split term:///usr/local/bin/bash\ -i\ -l<cr>:set wfh<cr>i
+" }}}
+colorscheme monokai
