@@ -90,6 +90,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'alex-ac/vim-plist'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'keith/vim-swift'
 call vundle#end()
 syntax on
 filetype plugin indent on
