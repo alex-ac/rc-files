@@ -1,12 +1,10 @@
 " Enable 256 colors mode. {{{
 if !exists("g:startup_options_set")
   let g:startup_options_set = 1
-  set t_Co=256
   set encoding=utf-8
+  set guicursor=
+  set mouse=
 endif
-" }}}
-" Disable fucking mouse. {{{
-set mouse=
 " }}}
 " Enable syntax highlighting {{{
 " highlight column 80 as a guide
