@@ -11,7 +11,7 @@ bindkey \^U backward-kill-line
 export PROMPT="%B%F{green}%n@%m %(!.%F{red}.%F{blue})%1d %(!.#.$) %f%b"
 
 export CLICOLOR=1
-export PATH=$PATH:$HOME/.git-helpers
+export PATH=$PATH:$HOME/.git-helpers:$HOME/bin
 
 if [ -e ".profile.local" ]; then
   . .profile.local

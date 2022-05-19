@@ -23,6 +23,7 @@ set ts=2 sts=2 sw=2 et
 set autoindent smartindent
 " }}}
 " Setup Bindings {{{
+let mapleader = "."
 " Disable arrows {{{
 noremap <up> <nop>
 noremap <down> <nop>
@@ -86,9 +87,10 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
-Plugin 'alex-ac/vim-plist'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'keith/swift.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
 call vundle#end()
 syntax on
 filetype plugin indent on
@@ -98,6 +100,22 @@ let g:airline_powerline_fonts=1
 " }}}
 " Setup NerdTREE {{{
 noremap <Leader>sb :NERDTreeToggle<CR>
+" function MyNerdTreeLeft()
+"   normal! h
+" endfunction
+" function MyNerdTreeDown()
+"   normal! j
+" endfunction
+" function MyNerdTreeUp()
+"   normal! k
+" endfunction
+" function MyNerdTreeRight()
+"   normal! l
+" endfunction
+" call NERDTreeAddKeyMap({'key': 'h', 'callback': 'MyNerdTreeLeft', 'quickhelp': 'Move cursor left', 'override': 1, 'scope': 'all'})
+" call NERDTreeAddKeyMap({'key': 't', 'callback': 'MyNerdTreeDown', 'quickhelp': 'Move cursor down', 'override': 1, 'scope': 'all'})
+" call NERDTreeAddKeyMap({'key': 'n', 'callback': 'MyNerdTreeUp', 'quickhelp': 'Move cursor up', 'override': 1, 'scope': 'all'})
+" call NERDTreeAddKeyMap({'key': 's', 'callback': 'MyNerdTreeRight', 'quickhelp': 'Move cursor right', 'override': 1, 'scope': 'all'})
 " }}}
 " Setup Tagbar {{{
 noremap <Leader>st :TagbarToggle<CR>
@@ -118,6 +136,7 @@ set exrc
 " }}}
 " Terminal setup {{{
 tnoremap <ESC> <c-\><c-n>
-noremap <Leader>tt :botright10split term:///usr/local/bin/bash\ -i\ -l<cr>:set wfh<cr>i
+noremap <Leader>tt :botright10split term:///bin/zsh\ -i\ -l<cr>:set wfh<cr>i
 " }}}
 colorscheme monokai
+autocmd BufRead,BufNew *.tsx set filetype=typescript

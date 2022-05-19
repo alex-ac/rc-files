@@ -5,6 +5,7 @@
 !.config/nvim/init.vim
 !.nvim/
 .nvim/bundle
+!bin/rcfiles-install
 !.screenrc
 !.profile
 !.default.itermcolors

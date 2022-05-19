@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+DESTDIR=${HOME}
+REPO=${HOME}/.rc-files
+TARFILE=${HOME}/.rc-files.tar
+
+if [ ! -e "${REPO}" ]; then
+mkdir "${REPO}"
+  git -C "${REPO}" init
+  git -C "${REPO}" remote add origin https://github.com/alex-ac/rc-files.git
+  git -C "${REPO}" remote set-url --push origin git@github.com:alex-ac/rc-files.git
+fi
+git -C "${REPO}" fetch origin master
+git -C "${REPO}" checkout -f origin/master
+git -C "${REPO}" submodule update --init --recursive
+
+FILELIST=`find "${REPO}" -not \( -path "${REPO}/.git" -prune \) -not -type d | sed "s%${REPO}/%%g"`
+
+tar -C "${REPO}" -cf "${TARFILE}" ${FILELIST}
+
+tar -xf "${TARFILE}"
+
+if [ ! -e "${DESTDIR}/.nvim/bundles/Vundle" ]; then
+  git clone https://github.com/VundleVim/Vundle.vim "${DESTDIR}/.nvim/bundles/Vundle.vim"
+fi
