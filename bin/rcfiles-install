@@ -6,6 +6,13 @@ DESTDIR=${HOME}
 REPO=${HOME}/.rc-files
 TARFILE=${HOME}/.rc-files.tar
 
+cleanup_rcfiles() {
+  if [ -e "${TARFILE}" ]; then
+    rm -f " ${TARFILE}"
+  fi
+}
+trap cleanup_rcfiles EXIT
+
 if [ ! -e "${REPO}" ]; then
 mkdir "${REPO}"
   git -C "${REPO}" init
@@ -21,7 +28,9 @@ FILELIST=`find "${REPO}" -not \( -path "${REPO}/.git" -prune \) -not -type d | s
 tar -C "${REPO}" -cf "${TARFILE}" ${FILELIST}
 
 tar -xf "${TARFILE}"
+rm -f "${TARFILE}"
 
 if [ ! -e "${DESTDIR}/.nvim/bundles/Vundle" ]; then
   git clone https://github.com/VundleVim/Vundle.vim "${DESTDIR}/.nvim/bundles/Vundle.vim"
 fi
+
