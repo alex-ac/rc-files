@@ -31,6 +31,6 @@ tar -xf "${TARFILE}"
 rm -f "${TARFILE}"
 
 if [ ! -e "${DESTDIR}/.nvim/bundles/Vundle" ]; then
-  git clone https://github.com/VundleVim/Vundle.vim "${DESTDIR}/.nvim/bundles/Vundle.vim"
+  git clone https://github.com/VundleVim/Vundle.vim "${DESTDIR}/.nvim/bundle/Vundle.vim"
 fi
 
