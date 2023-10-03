@@ -1,3 +1,0 @@
-[submodule ".git-helpers"]
-	path = .git-helpers
-	url = https://github.com/alex-ac/git-helpers.git
