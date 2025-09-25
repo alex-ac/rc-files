@@ -87,7 +87,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'ku1ik/vim-monokai'
 Plugin 'keith/swift.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mfussenegger/nvim-dap'
@@ -122,6 +122,9 @@ noremap <Leader>sb :NERDTreeToggle<CR>
 " }}}
 " Setup Tagbar {{{
 noremap <Leader>st :TagbarToggle<CR>
+" }}}
+" Setup Vim-go {{{
+let g:go_imports_autosafe = 1
 " }}}
 " Setup Easytags {{{
 let g:easytags_async = 1
