@@ -1,14 +1,1 @@
-*
-!.gitignore
-!.vimrc
-!.vim/
-!.config/nvim/init.vim
-!.nvim/
-.nvim/bundle
-!bin/rcfiles-install
-!.screenrc
-!.profile
-!.default.itermcolors
-!.inputrc
-!.zshrc
 

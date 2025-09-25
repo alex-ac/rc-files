@@ -90,6 +90,9 @@ Plugin 'xolox/vim-easytags'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'keith/swift.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'mfussenegger/nvim-dap'
+Plugin 'nvim-neotest/nvim-nio'
+Plugin 'rcarriga/nvim-dap-ui'
 Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
 call vundle#end()
 syntax on
@@ -140,3 +143,4 @@ noremap <Leader>tt :botright10split term:///bin/zsh\ -i\ -l<cr>:set wfh<cr>i
 " }}}
 colorscheme monokai
 autocmd BufRead,BufNew *.tsx set filetype=typescript
+source ~/.config/nvim/init2.lua
